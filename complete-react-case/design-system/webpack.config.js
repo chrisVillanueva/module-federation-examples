@@ -43,16 +43,17 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "component_app",
+      name: "design_system",
       filename: "remoteEntry.js",
       exposes: {
         "./Button": "./src/Button.jsx",
         "./Dialog": "./src/Dialog.jsx",
         "./Logo": "./src/Logo.jsx",
+        "./Title": "./src/Title.jsx",
         "./ToolTip": "./src/ToolTip.jsx",
       },
       remotes: {
-        "lib-app": "lib_app@http://localhost:3000/remoteEntry.js",
+        "core-libs": "core_libs@http://localhost:3000/remoteEntry.js",
       },
     }),
     new HtmlWebpackPlugin({

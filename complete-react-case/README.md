@@ -1,26 +1,27 @@
-# react-webpack-MF
+# wmf-react-case-study
 
-[中文](./README_zh-cn.md)
+Webpack Module Federation: A React Case Study.
 
-A complete Webpack Module Federation Case with React.
+## project directory
 
-# project directory
 
-## lib-app
 
-It is a low-level or basic app, which exposes libraries like `react`, `react-dom`.
+## core-libs
 
-It is a pure `remote`
+The low-level container for cross-app dependencies.  Exposes core libraries, such as `react`, `react-dom`. This is a **pure `remote`** dependency.
 
-## component-app
 
-It is a middle-level app, which depends on modules exposed from `lib-app` : `react` ,`react-dom`. In the meantime, it also exposes components: `Dialog`, `Button` to another app called `main-app`.
+## design-system
 
-It is both host and remote.
+
+
+It is a middle-level app, which depends on modules exposed from `core-libs` : `react` ,`react-dom`. In the meantime, it also exposes components: `Dialog`, `Button` to another app called `main-app`.
+
+** It is both host and remote. **
 
 ## main-app
 
-the top-level app, which depends on `lib-app` and `component-app`.
+the top-level app, which depends on `core-libs` and `component-app`.
 
 It is a pure host.
 
