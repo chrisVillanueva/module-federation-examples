@@ -7,7 +7,7 @@ module.exports = {
   devtool: "hidden-source-map",
   output: {
     publicPath: "http://localhost:3002/",
-    clean: true,
+    clean: false,
   },
   resolve: {
     extensions: [
@@ -34,6 +34,10 @@ module.exports = {
         options: {
           presets: ["@babel/preset-react"],
         },
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

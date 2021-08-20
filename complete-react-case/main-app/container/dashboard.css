@@ -1,0 +1,17 @@
+.flex, .dashboard .container-fluid.content-wrapper {
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+  
+  .dashboard .container-fluid.content-wrapper {
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 4rem 0 0 0; }
+  
+  @media (max-width: 576px) {
+    .dashboard .container-fluid.content-wrapper .main-content {
+      padding-left: 0; } 
+    }
